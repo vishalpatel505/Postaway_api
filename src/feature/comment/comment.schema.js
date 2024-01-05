@@ -1,0 +1,13 @@
+import mongoose from "mongoose";
+
+export const commentSchema = new mongoose.Schema({
+    userId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'users'
+    },
+    postId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'post'
+    },
+    content:String
+})

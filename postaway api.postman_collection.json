@@ -1,0 +1,593 @@
+{
+	"info": {
+		"_postman_id": "ca267b5a-8802-43f6-ae6b-4c861c559246",
+		"name": "postaway api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30214606"
+	},
+	"item": [
+		{
+			"name": "User_Api",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Vishal patel\",\r\n    \"email\": \"vis.patel505@gmail.com\",\r\n    \"password\":\"password1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3400/api/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3400",
+							"path": [
+								"api",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiY3VzdG9tZXIxQGdtYWlsLmNvbSIsImlhdCI6MTcwMDEyNTUwOSwiZXhwIjoxNzAwMTI5MTA5fQ.cJ8rTFlgoComindE7vNNzGqlHniVgiamBb_f5mY21nA",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"customer1@gmail.com\",\r\n    \"password\":\"password1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3400/api/users/signin",
+							"host": [
+								"localhost"
+							],
+							"port": "3400",
+							"path": [
+								"api",
+								"users",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTgyYjliNDg2MDRmNzExY2FiMTc2MDciLCJ1c2VySWQiOiJ2aXMucGF0ZWw1MDVAZ21haWwuY29tIiwiaWF0IjoxNzAzMDY3NjA1LCJleHAiOjE3MDMwNzEyMDV9.UjooxRolEPTMJakWbKdydVa4nHrEWlrpt67BbGAF6Ys",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3400/api/users/get-details/:userId",
+							"host": [
+								"localhost"
+							],
+							"port": "3400",
+							"path": [
+								"api",
+								"users",
+								"get-details",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-detail",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post_Api",
+			"item": [
+				{
+					"name": "addnewpost",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiY3VzdG9tZXIxQGdtYWlsLmNvbSIsImlhdCI6MTcwMDMwMzc2NiwiZXhwIjoxNzAwMzA3MzY2fQ.QZZWrYZ5ZrJkRXg68qgmB1K_wRUNcy2uvgtHy-OdEJ8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "caption",
+									"value": "This image give me feel of japan ",
+									"type": "text"
+								},
+								{
+									"key": "imageUrl",
+									"type": "file",
+									"src": "/C:/Users/dell/Pictures/Saved Pictures/[BHTT - XK] [EDIT - HOÀN] Công Chúa Tha Mạng - Phượng Khi Vũ _.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3400/api/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "3400",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletepost",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiY3VzdG9tZXIxQGdtYWlsLmNvbSIsImlhdCI6MTcwMDMwMzc2NiwiZXhwIjoxNzAwMzA3MzY2fQ.QZZWrYZ5ZrJkRXg68qgmB1K_wRUNcy2uvgtHy-OdEJ8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3400/api/posts/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3400",
+							"path": [
+								"api",
+								"posts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatepost",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiY3VzdG9tZXIxQGdtYWlsLmNvbSIsImlhdCI6MTcwMDMwMzc2NiwiZXhwIjoxNzAwMzA3MzY2fQ.QZZWrYZ5ZrJkRXg68qgmB1K_wRUNcy2uvgtHy-OdEJ8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3400/api/posts/6582e245a17da87a34cf76b7",
+							"host": [
+								"localhost"
+							],
+							"port": "3400",
+							"path": [
+								"api",
+								"posts",
+								"6582e245a17da87a34cf76b7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getmypost",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiY3VzdG9tZXIxQGdtYWlsLmNvbSIsImlhdCI6MTcwMDMwMzc2NiwiZXhwIjoxNzAwMzA3MzY2fQ.QZZWrYZ5ZrJkRXg68qgmB1K_wRUNcy2uvgtHy-OdEJ8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3400/api/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "3400",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/getonepost",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTgyZjU1ZmRiOGZjMjhhYWNmNGU1MDYiLCJ1c2VySWQiOiJhbmphbGkucGF0ZWw1MDVAZ21haWwuY29tIiwiaWF0IjoxNzAzMDgxMzIzLCJleHAiOjE3MDMwODQ5MjN9.yXmUgJZ5KImNNpT60s5-H-9ngHQQBgFOs9DEM7OtxcM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3400/api/posts/6582f5c8db8fc28aacf4e509",
+							"host": [
+								"localhost"
+							],
+							"port": "3400",
+							"path": [
+								"api",
+								"posts",
+								"6582f5c8db8fc28aacf4e509"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getallpost",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment_Api",
+			"item": [
+				{
+					"name": "addNewComment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTgyZjU1ZmRiOGZjMjhhYWNmNGU1MDYiLCJ1c2VySWQiOiJhbmphbGkucGF0ZWw1MDVAZ21haWwuY29tIiwiaWF0IjoxNzAzMTQ2ODY0LCJleHAiOjE3MDMxNTA0NjR9.Fidj2ub8Fd2Nw1Ku8poQLLhjOYQSeSJxFEpyQsqQS54",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"this is fantastic\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3400/api/comments/6582f5c8db8fc28aacf4e509",
+							"host": [
+								"localhost"
+							],
+							"port": "3400",
+							"path": [
+								"api",
+								"comments",
+								"6582f5c8db8fc28aacf4e509"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateComment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"this is awesome\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3400/api/comments/6583f5ff82cc97880dc0cd4c",
+							"host": [
+								"localhost"
+							],
+							"port": "3400",
+							"path": [
+								"api",
+								"comments",
+								"6583f5ff82cc97880dc0cd4c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteComment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiY3VzdG9tZXIxQGdtYWlsLmNvbSIsImlhdCI6MTcwMDMwMzc2NiwiZXhwIjoxNzAwMzA3MzY2fQ.QZZWrYZ5ZrJkRXg68qgmB1K_wRUNcy2uvgtHy-OdEJ8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3400/api/comments/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3400",
+							"path": [
+								"api",
+								"comments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllComment",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Like_Api",
+			"item": [
+				{
+					"name": "toggleLike",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiY3VzdG9tZXIxQGdtYWlsLmNvbSIsImlhdCI6MTcwMDMwMzc2NiwiZXhwIjoxNzAwMzA3MzY2fQ.QZZWrYZ5ZrJkRXg68qgmB1K_wRUNcy2uvgtHy-OdEJ8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3400/api/likes/toggle/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3400",
+							"path": [
+								"api",
+								"likes",
+								"toggle",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-All-likes-for-postId",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Friend_Request_Api",
+			"item": [
+				{
+					"name": "toggle/friendship",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3400/api/friends/toggle-friendship/6582b9b48604f711cab17607",
+							"host": [
+								"localhost"
+							],
+							"port": "3400",
+							"path": [
+								"api",
+								"friends",
+								"toggle-friendship",
+								"6582b9b48604f711cab17607"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-friends",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3400/api/friends/get-friends/6582f55fdb8fc28aacf4e506",
+							"host": [
+								"localhost"
+							],
+							"port": "3400",
+							"path": [
+								"api",
+								"friends",
+								"get-friends",
+								"6582f55fdb8fc28aacf4e506"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-pending-request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3400/api/friends/get-pending-requests",
+							"host": [
+								"localhost"
+							],
+							"port": "3400",
+							"path": [
+								"api",
+								"friends",
+								"get-pending-requests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "response-to-request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "otp_api",
+			"item": [
+				{
+					"name": "send-otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3400/api/otp/send",
+							"host": [
+								"localhost"
+							],
+							"port": "3400",
+							"path": [
+								"api",
+								"otp",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"vis.patel505@gmail.com\",\r\n    \"otp\":6448\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3400/api/otp/verify",
+							"host": [
+								"localhost"
+							],
+							"port": "3400",
+							"path": [
+								"api",
+								"otp",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset-password",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"vis.patel505@gmail.com\",\r\n    \"newPassword\":\"password5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3400/api/otp/reset-password",
+							"host": [
+								"localhost"
+							],
+							"port": "3400",
+							"path": [
+								"api",
+								"otp",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

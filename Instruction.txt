@@ -1,0 +1,7 @@
+Note: Instruction for using postmaster for testing Api
+ 
+1. Register yourself
+2. sign in by puting email and password in body
+3. copy token
+4. insert token in Authentication which present in header for JWT Athorization
+5. do step n 4. for using every api
